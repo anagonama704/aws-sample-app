@@ -11,7 +11,7 @@ on:
 jobs:
   build:
     # 実行環境の指定
-    runs-on: Linux/UNIX
+    runs-on: ubuntu-latest
     steps:
       # デプロイする
       - name: Deploy
