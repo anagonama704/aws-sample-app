@@ -19,8 +19,13 @@ class User extends Authenticatable
      */
     protected $fillable = [
         'name',
+        'birth_date',
+        'zip_code',
+        'address',
+        'tel',
         'email',
         'password',
+        'is_admin'
     ];
 
     /**
@@ -41,4 +46,29 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    //お気に入り登録の判断
+    public function isLike($book_id)
+    {
+        return $this->likeBooks()->where('books.id',$book_id)->exists();
+    }
+
+    public function likeBooks()
+    {
+        return $this->belongsToMany(Book::class, 'likes');
+    }
+
+    public function cart()
+    {
+        return $this->belongsToMany(Book::class, 'carts');
+    }
+    public function isInCart($book_id)
+    {
+        return $this->cart()->where('books.id',$book_id)->exists();
+    }
+
+    public function isAdmin()
+    {
+        return (bool)$this->is_admin;
+    }
 }

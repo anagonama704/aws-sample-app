@@ -1,0 +1,314 @@
+@charset "UTF-8";
+
+/* 基本的なリセット */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+/* フォントの設定 */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+li,
+button {
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    color: #333;
+}
+
+/* ヘッダー要素 */
+h1 {
+    font-size: 2em;
+    margin-bottom: 0.5em;
+}
+h2 {
+    font-size: 1.5em;
+    margin-bottom: 0.75em;
+}
+h3 {
+    font-size: 1.17em;
+    margin-bottom: 1em;
+}
+h4 {
+    font-size: 1em;
+    margin-bottom: 1.25em;
+}
+h5 {
+    font-size: 0.83em;
+    margin-bottom: 1.5em;
+}
+h6 {
+    font-size: 0.67em;
+    margin-bottom: 1.75em;
+}
+
+.title {
+    background-color: rgb(212, 212, 229);
+    padding: 10px;
+}
+
+/* 段落 */
+p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 1em;
+}
+
+/* リンク */
+td:a {
+    color: #ce2cda;
+    text-decoration: none;
+}
+a {
+    color: #813886;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* リスト */
+ul,
+ol {
+    margin-left: 20px;
+    padding-left: 20px;
+}
+
+li {
+    line-height: 1.6;
+}
+.ul_edit {
+    margin: 6px 0;
+}
+.li_edit {
+    list-style-type: none;
+    display: inline-block;
+    padding: 5px 10px;
+    border: 1px solid #88afad;
+}
+
+/* テーブル */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 1em;
+}
+
+th,
+td {
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+th {
+    background-color: #f5f5f5;
+    font-weight: bold;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* 画像 */
+img {
+    width: 400px;
+    height: auto;
+}
+
+td img {
+    width: 100px;
+    height: auto;
+}
+
+/* ボタン */
+button {
+    padding: 10px 15px;
+    background-color: #dfdfdf;
+    color: #292929;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+td button {
+    display: block;
+    margin: auto;
+}
+
+button:hover {
+    background-color: #0089b3;
+}
+.cart {
+    color: #686868;
+}
+.cart:hover {
+    background-color: #51a398;
+}
+/* ホームページ buttons */
+.customize_btn {
+    display: block;
+    width: 40%;
+    border: none;
+    border-radius: 9px;
+    background-color: #3bb371;
+    color: #f7e4a7;
+    padding: 12px 20px;
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    font-size: 24px;
+    font-weight: bolder;
+    cursor: pointer;
+    text-align: center;
+    margin: auto;
+    transition: background-color 0.5s;
+}
+.customize_btn:hover {
+    background-color: rgb(27, 177, 132);
+}
+
+/* Nav　buttons */
+.nav_button{
+    background-color: #414040;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 5px;
+    font-size: 15px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    transition: background-color 0.8s;
+}
+.nav_button:hover{
+    background-color: #333;
+}
+
+/* トップへ戻るボタン */
+.page_top_btn {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    font-weight: bold;
+    padding: 0.7em;
+    text-align: center;
+    background: rgb(29, 216, 129);
+    color: #f0efef;
+    transition: 0.5s;
+    }
+
+.page_top_btn:hover {
+    background: rgba(2, 197, 139, 0.8);
+    color: rgb(255, 255, 255, 0.8);
+}
+
+/* <i>要素 */
+.emoji{
+    font-size: 105%;
+    font-style: normal;
+}
+
+/* フォーム要素 */
+input,
+textarea,
+select {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    margin-bottom: 1em;
+}
+
+input[type="submit"],
+button[type="submit"] {
+    background-color: #28a745;
+    color: white;
+}
+
+input[type="submit"]:hover,
+button[type="submit"]:hover {
+    background-color: #218838;
+}
+
+/* フッター */
+footer {
+    background-color: #343a40;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 10px;
+}
+.main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px;
+}
+header {
+    background: #414040;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+}
+
+header .brand {
+    display: block;
+    color: white;
+    font-size: 1.3rem;
+}
+
+.navigation {
+    display: flex;
+    margin-left: auto;
+    padding: 0;
+    list-style-type: none;
+}
+
+.navigation a {
+    color: #ededed;
+    text-decoration: none;
+}
+
+.navigation li {
+    padding: 0 10px;
+}
+
+textarea {
+    min-height: 100px;
+    min-width: 400px;
+}
+
+/* ページネーション */
+svg.w-5.h-5 {
+    width: 25px;
+    vertical-align: middle;
+}
+
+.error {
+    color: red;
+}
+.search_area dd input {
+    width: 30%;
+}
+/* .drop_action:focus + .drop_menu {
+    display: contents;
+}
+.drop_menu {
+    display: none;
+} */
